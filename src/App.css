@@ -1,33 +1,103 @@
-.App {
-  text-align: center;
+.header{
+  background-color: #0195CB;
+  height: 80px;
+  padding-top: 5px;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.header> h1{
+  color:white;
+  margin-left: 30px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.footer{
+  background-color: #007FAE;
+  padding: 5px 0px; 
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.footer >center> p{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* List */
+.List{
+  border: 1px solid #006C93;
+  border-radius: 30px;
+  padding: 10px;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 150px;
+  /* padding: 50px; */
+}
+.add_button{
+  border: none;
+  padding: 5px 10px;
+  background-color: black;
+  color: white;
+}
+.add_button:hover{
+  cursor: pointer;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+
+}
+.modal-main {
+  position:fixed;
+  background: white;
+  width: 40%;
+  height: auto;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  padding: 20px;
+}
+.display-block {
+  display: block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.display-none {
+  display: none;
 }
+.add_button{
+  border: none;
+  background-color: #01A4C4;
+  padding: 5px 15px;
+}
+.modalContent{
+  width: 100%;
+  position: relative;
+  /* margin-left: 15px; */
+}
+.list_of_activities{
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.item{
+  /* border: 1px solid #006C93;
+  width: 90%;
+  display: inline-flex; */
+  /* margin-top: 20px; */
+  width: 100%;
+}
+.itemDate{
+  padding: 10px 15px;
+  width: 20%;
+  border-right: 1px solid #006C93;
+  margin: 0 auto;
+}
+.itemTime{
+  padding: 10px 15px;
+  width: 20%;
+  border-right: 1px solid #006C93;
+}
+.itemDesc{
+  padding: 10px;
+  width: 70%;
+}
+
