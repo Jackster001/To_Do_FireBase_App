@@ -14,7 +14,7 @@ class List extends React.Component {
         this.props.getItems();
         let temp = Object.assign([{}], this.props.items)
         this.setState({activities: temp})
-        console.log(console.log(this.state.activities))
+        console.log(this.state.activities)
     }
     showModal = () => {
         let show=true
@@ -49,7 +49,7 @@ class List extends React.Component {
             <Modal className="modal" show={this.state.show} handleClose={()=>this.hideModal()}>
                 <div className="modalContent">
                 <center><h2>Add Activity</h2>
-                 Date: <input type="date" name="act_Date" size="32" onChange={this.onChangeDate.bind(this)}/><br/><br/>
+                 Date: <input type="date" name="act_Date" size="32" data-date="" data-date-format="DD MMMM YYYY" onChange={this.onChangeDate.bind(this)}/><br/><br/>
                  Time: <input type="time" name="act_Time" size="32" onChange={this.onChangeTime.bind(this)}/><br/><br/>
                  <textarea rows="4" cols="50" name="Description" placeholder="Description"  onChange={this.onChangeDes.bind(this)}></textarea><br/>
                  {/* <input type="text" name="des"/><br/><br/> */}<br/></center>
@@ -63,12 +63,18 @@ class List extends React.Component {
                     <th>Date</th>
                     <th>Time</th>
                     <th>Activities</th>
+                    <th>Edit</th>
                     </tr>
                 </thead>
                 <tbody>
                     {this.props.items.map((act, i)=>{
-                        // console.log(act.Time)
-                        return (<Item key={i} Date={act.Date} Time={act.Time} desc={act.Description}/>)
+                        return (<Item 
+                            key={i} 
+                            id={act.id}
+                            Date={act.Date} 
+                            Time={act.Time} 
+                            desc={act.Description}
+                            />)
                     })}
                 </tbody>
             </table>
@@ -84,4 +90,4 @@ export default compose(
       mapStateToProps,
       {getItems, addItem}
     ),
-  )(List);
+)(List);

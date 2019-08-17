@@ -8,10 +8,15 @@ const INITIAL_STATE = {
         return {...state, items: action.payload};
       }
       case 'ITEM_ADD': {
-        let newItems=Object.assign([],state.items);
-        newItems.push(action.payload)
-        // let newItem={}
-        return {...state.items, items: newItems};
+        return {...state, items:[action.payload, ...state.items]};
+      }
+      case 'ITEM_DELETE':{
+        const newItems = Object.assign([],{...state.items});
+        const index= state.items.findIndex(item => {return item.id === action.id})
+        newItems.splice(index, 1);
+        console.log(index);
+        console.log(newItems)
+        return {...state, items: newItems};
       }
       default:
         return state;

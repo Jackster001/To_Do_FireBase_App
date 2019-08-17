@@ -1,6 +1,6 @@
 .header{
-  background-color: #0195CB;
-  height: 80px;
+  background-color: black;
+  height: 70px;
   padding-top: 5px;
 }
 .header> h1{
@@ -8,7 +8,7 @@
   margin-left: 30px;
 }
 .footer{
-  background-color: #007FAE;
+  background-color: black;
   padding: 5px 0px; 
   position: fixed;
   bottom: 0;
@@ -20,10 +20,10 @@
 
 /* List */
 .List{
-  border: 1px solid #006C93;
-  border-radius: 30px;
+  border: 1px solid black;
+  background-color: #D7D8D8;
   padding: 10px;
-  width: 50%;
+  width: 80%;
   margin: 0 auto;
   margin-bottom: 150px;
   /* padding: 50px; */
@@ -77,6 +77,7 @@
   width: 90%;
   margin: 0 auto;
   margin-bottom: 50px;
+  background-color: white;
 }
 .item{
   /* border: 1px solid #006C93;
@@ -84,6 +85,9 @@
   display: inline-flex; */
   /* margin-top: 20px; */
   width: 100%;
+}
+.item> td{
+  padding: 20px;
 }
 .itemDate{
   padding: 10px 15px;

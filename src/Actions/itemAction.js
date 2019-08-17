@@ -38,4 +38,15 @@ const addItem= (item)=>{
         payload: data
     }
 }
-export {getItems,addItem};
+const deleteItem = (id) =>{
+    db.collection("items").doc(id).delete().then(function(){
+        console.log("Activity successfully deleted!");
+    }).catch(function(error) {
+        console.error("Error removing document: ", error);
+    });
+    return{
+        type: "USER_DELETE",
+        id: id
+    }
+}
+export {getItems, addItem, deleteItem};
