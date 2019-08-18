@@ -74,7 +74,8 @@ class List extends React.Component {
                             Date={act.Date} 
                             Time={act.Time} 
                             desc={act.Description}
-                            />)
+                            activityObject={act}
+                        />)
                     })}
                 </tbody>
             </table>
