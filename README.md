@@ -1,4 +1,4 @@
-# Quest
+# Daily Planner
 
 A simple to do list application that lets me add, edit and delete using firebase as the backend
 
