@@ -23,10 +23,33 @@
   border: 1px solid black;
   background-color: white;
   padding: 10px;
-  width: 80%;
   margin: 0 auto;
   margin-bottom: 150px;
   border-radius: 15px;
+}
+@media only screen and (min-width: 1000px){
+  .List{
+    width: 70%;
+  }
+  .list_of_activities{
+    width:90%;
+  }
+}
+@media only screen and (min-width: 2000px){
+  .List{
+    width: 50%;
+  }
+  .list_of_activities{
+    width:90%;
+  }
+}
+@media only screen and (max-width: 999px){
+  .List{
+    width: 80%;
+  }
+  .list_of_activities{
+    width:90%;
+  }
 }
 .add_button{
   border: none;
@@ -36,6 +59,7 @@
 }
 .add_button:hover{
   cursor: pointer;
+
 }
 .modal {
   position: fixed;
@@ -68,22 +92,19 @@
   background-color: #01A4C4;
   padding: 5px 15px;
 }
+.add_button:hover{
+  background-color: #19D1E3;
+}
 .modalContent{
   width: 100%;
   position: relative;
-  /* margin-left: 15px; */
 }
 .list_of_activities{
-  width: 90%;
   margin: 0 auto;
   margin-bottom: 50px;
   background-color: white;
 }
 .item{
-  /* border: 1px solid #006C93;
-  width: 90%;
-  display: inline-flex; */
-  /* margin-top: 20px; */
   width: 100%;
 }
 .item> td{
@@ -107,4 +128,25 @@
 .missingTop{
   border: 1px solid black
 }
-
+.delete_button{
+  border: 0;
+  background-color: #666666;
+  color: white;
+  padding: 5px 10px;
+  margin-top: 5px;
+}
+.delete_button:hover{
+  cursor: pointer;
+  background-color: #CC1901;
+}
+.edit_button{
+  border: 0;
+  background-color: #01A4C4;
+  color: white;
+  padding: 5px 10px;
+  margin-top: 5px;
+}
+.edit_button:hover{
+  cursor: pointer;
+  background-color: #19D1E3;
+}
