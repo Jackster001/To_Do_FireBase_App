@@ -35,12 +35,32 @@ class List extends React.Component {
         this.setState({...this.state, Date:event.target.value})
     }
     onChangeTime(event){
-        this.setState({...this.state, Time:event.target.value})
+        this.setState({...this.state, Time: event.target.value})
     }
     onChangeDes(event){
         this.setState({...this.state, activityDes:event.target.value})
     }
-
+    onTimeChange(time) {
+        let number=""+time
+        var timeSplit = number.split(':'),
+          hours,
+          minutes,
+          meridian;
+        hours = timeSplit[0];
+        minutes = timeSplit[1];
+        if (hours > 12) {
+          meridian = 'PM';
+          hours -= 12;
+        } else if (hours < 12) {
+          meridian = 'AM';
+          if (hours === 0) {
+            hours = 12;
+          }
+        } else {
+          meridian = 'PM';
+        }
+        return(hours + ':' + minutes + ' ' + meridian);
+      }
     render() {
       return (
          <div className="List">
@@ -68,11 +88,12 @@ class List extends React.Component {
                 </thead>
                 <tbody>
                     {this.props.items.map((act, i)=>{
+                        let time= this.onTimeChange(act.Time)
                         return (<Item 
                             key={i} 
                             id={act.id}
                             Date={act.Date} 
-                            Time={act.Time} 
+                            Time={time} 
                             desc={act.Description}
                             activityObject={act}
                         />)
